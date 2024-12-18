@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script> 
+   <script type="text/javascript" src="cssanimation-gsap.js"></script>
+   
+</head>
+<style>
+    body{
+    color: white;
+    background-color: black;
+       
+}
+
+nav{
+    width:100% ;
+    display: flex;
+    align-items:center ;
+    gap:30px;
+    height: ;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    backdrop-filter: blur(20px);
+    
+}
+.nav-icons a{
+    position: relative ;
+    cursor: pointer;
+    color: white;
+    font-size: 28px ;
+    padding: 0.5rem 1rem;
+    transition: 0.25s;
+    text-decoration: none;
+    
+}
+.nav-icons a::after{
+    position: absolute;
+    content: "";
+    inset:0;
+    background: white;
+    scale:1 0;
+    z-index: -1;
+    transition: 0.45s;
+    border-radius: 10px;
+}
+.nav-icons a:hover{
+    color: black;
+}
+.nav-icons a:hover::after{
+    scale:1 1;
+}    
+   .nav-icons i{
+        color: white;
+    }
+       .nav-icons i:hover{
+           color: black;
+     
+        }
+     .nav  i:hover::after{
+    scale:1 1;
+    }
+ .nav-icons i{
+        margin-left: 1rem;
+        }
+       .back-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; 
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0; 
+ }
+
+.home {
+        display: flex;
+        align-items: center; 
+        justify-content: flex-start; 
+        height: 100vh;
+        padding: 0 2rem; 
+    }
+.home-img{
+    border-radius: 50%;
+}
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #b74b4b;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+ .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; 
+        justify-content: center; 
+        margin-left: 2rem; 
+    }
+
+    .content h1 {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    .content h3 {
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+
+    .content p {
+        font-size: 1.6rem;
+    }
+    .content span{
+        color: red;
+    }
+    .typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.typing-text span{
+    position: relative;
+    display: inline-block;
+}
+.typing-text span::before{
+    content: "software Developer";
+    color: red;
+    animation: words 20s infinite;
+}
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 3px solid #b74b4b;
+    }
+}
+@keyframes words{
+    0%, 20%{
+        content: "Shinigami";
+    }
+    21%, 40%{
+        content: "Quincy";
+    }
+    41%, 60%{
+        content: "FullBringer";
+    }
+    61%, 80%{
+        content: "Hallow";
+    }
+    81%, 100%{
+        content: "Human";
+    }
+}
+.social-icons a i {
+    color: white; 
+    font-size: 2rem; 
+    transition: color 0.3s ease; 
+}
+
+.social-icons a i:hover {
+    color: red;  
+}
+  .leFadeInTop { animation-name: leFadeInTop }
+@keyframes leFadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to { opacity: 1 }
+} 
+.home-img { animation-name: leFadeInBottom }
+@keyframes leFadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to { opacity: 1 }
+} 
+.bounceInLeft { animation-name: bounceInLeft }
+@keyframes bounceInLeft {
+    0% { transform: translate3d(-300%, 0, 0) }
+    58% { transform: translate3d(27px, 0, 0) }
+    73% { transform: translate3d(-12px, 0, 0) }
+    88% { transform: translate3d(8px, 0, 0) }
+}
+</style>
+<body>
+   <header>
+    
+    <div class="leFadeInTop"> 
+        <nav class="nav-icons">
+        
+        <a class="logo" style="font-size: 3rem;">Harold</a>
+        
+        <a href="home.html"><i class="fa fa-home" style="font-size:50px">
+            </i> <br> Home</a>
+            
+        
+        <a href="about.html"><i class="fa fa-id-card" style="font-size:50px; "></i> <br>About</a>
+       
+        <a href="contact.html"> <i class="fa fa-address-book"style="font-size:50px"></i> <br> Contact</a>
+        
+        <a href="index.html"> <i class="fa fa-sign-out" style="font-size:50px"></i> <br> Logout</a>
+    </nav>
+    </div>
+    </header>
+   
+    
+    
+    <section class="home">
+     <div class="home-img">
+        <img src="img/ichigo.jpeg" alt="">
+    </div>
+ <div class="bounceInLeft">
+    <div class="content">
+        <h1>Orewa<span>Ichigo</span></h1>
+        <h3 class="typing-text">I'm a <span></span></h3>
+            <p>"watashi no reiatsu dejikai shirou yokoso watashi no soul society mazu mazd a yare yare reiatsu de hitori iki no oshiki tsubutu hado no 99 goryu tenmetsu"</p>
+            
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+     </div>       
+    </div>
+    
+   
+                
+    
+     </section>
+    
+    
+</body>
+<script>
+    TweenMax.staggerFrom(".leFadeInTop", 1, {y:"-100%", autoAlpha:0, delay: 0.3, ease: Power4.easeOut}, 0.2);
+    
+    TweenMax.staggerFrom(".home-img", 1, {y:"100%", autoAlpha:0, delay: 0.3, ease: Power4.easeOut}, 0.2);
+    
+    TweenMax.fromTo(".bounceInLeft",2,{x:"-100%",bezier:[{x:0.9,y:0},{x:0.03,y:0},{x:0.69,y:0},{x:0.22,y:0}],ease:Sine.easeIn},{x:"0%",ease:Bounce.easeOut});
+</script>
+</html>

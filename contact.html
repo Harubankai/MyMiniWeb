@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script> 
+    <style>
+    @import url("https://fonts.googleapis.com/css?family=Poppins");
+   *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: "Poppins",sans-serif;
+   }
+   body{
+       
+       
+   }  
+nav{
+    width:100% ;
+    display: flex;
+    align-items:center ;
+    gap:30px;
+    height: ;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    backdrop-filter: blur(20px);
+    
+}
+.nav-icons a{
+    position: relative ;
+    cursor: pointer;
+    color: white;
+    font-size: 28px ;
+    padding: 0.5rem 1rem;
+    transition: 0.25s;
+    text-decoration: none;
+    
+}
+.nav-icons a::after{
+    position: absolute;
+    content: "";
+    inset:0;
+    background: white;
+    scale:1 0;
+    z-index: -1;
+    transition: 0.45s;
+    border-radius: 10px;
+}
+.nav-icons a:hover{
+    color: black;
+}
+.nav-icons a:hover::after{
+    scale:1 1;
+}    
+   .nav-icons i{
+        color: white;
+    }
+       .nav-icons i:hover{
+           color: black;
+     
+        }
+     .nav  i:hover::after{
+    scale:1 1;
+    }
+ .nav-icons i{
+        margin-left: 1rem;
+        }
+       .back-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; 
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0; 
+ }
+        .wrapper{
+            margin-top: 40%;
+            width: 420px ;
+            background: transparent;
+            border: 2px solid rgba (255,255,255,2);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 10px rgba(0,0,0,.2);
+            color: #fff;
+            border-radius: 10px;
+            padding: 30px 40px;
+           
+       
+       
+     
+      }
+     .wrapper h1 {
+         font-size: 36px;
+         text-align: center;
+     }
+     
+      
+      .back-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; 
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0; 
+ }
+ .social-icons a i {
+    color: white; 
+    font-size: 2rem; 
+    transition: color 0.3s ease; 
+    margin-left: 3rem;
+       
+       
+}
+
+.social-icons a i:hover {
+    color: red;  
+}
+.cen{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       
+       
+       
+}
+.leFadeInTop { animation-name: leFadeInTop }
+@keyframes leFadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to { opacity: 1 }
+} 
+.home-img { animation-name: leFadeInBottom }
+@keyframes leFadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to { opacity: 1 }
+} 
+.bounceInLeft { animation-name: bounceInLeft }
+@keyframes bounceInLeft {
+    0% { transform: translate3d(-300%, 0, 0) }
+    58% { transform: translate3d(27px, 0, 0) }
+    73% { transform: translate3d(-12px, 0, 0) }
+    88% { transform: translate3d(8px, 0, 0) }
+}
+.back-video { animation-name: leFadeInBottom }
+@keyframes leFadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to { opacity: 1 }
+} 
+</style>
+</head>
+<body>
+    <video autoplay loop muted plays-inline class="back-video" >
+        <source src="vid/bg.mp4"></source>
+        </video>
+    
+    <header>
+    
+    <div class="leFadeInTop"> 
+        <nav class="nav-icons">
+        
+        <a class="logo" style="font-size: 3rem;">Harold</a>
+        
+        <a href="home.html"><i class="fa fa-home" style="font-size:50px">
+            </i> <br> Profile</a>
+            
+        
+        <a href="about.html"><i class="fa fa-id-card" style="font-size:50px; "></i> <br>About</a>
+       
+        <a> <i class="fa fa-address-book"style="font-size:50px"></i> <br> Contact</a>
+        
+        <a href="index.html"> <i class="fa fa-sign-out" style="font-size:50px"></i> <br> Logout</a>
+    </nav>
+    </div>
+    </header>
+   <div class="cen">
+       <div class="wrapper">
+           <h1>Contact us via</h1>
+           <div class="social-icons">
+                <a href="#"><i class="fa fa-linkedin" ></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+     </div>       
+          </div> 
+    </div>
+</body>
+
+    <script>
+    TweenMax.staggerFrom(".leFadeInTop", 1, {y:"-100%", autoAlpha:0, delay: 0.3, ease: Power4.easeOut}, 0.2);
+    
+    TweenMax.staggerFrom(".cen", 1, {y:"100%", autoAlpha:0, delay: 0.3, ease: Power4.easeOut}, 0.2);
+     TweenMax.staggerFrom(".back-video", 1, {y:"100%", autoAlpha:0, delay: 0.3, ease: Power4.easeOut}, 0.2);
+    
+    TweenMax.fromTo(".bounceInLeft",2,{x:"-100%",bezier:[{x:0.9,y:0},{x:0.03,y:0},{x:0.69,y:0},{x:0.22,y:0}],ease:Sine.easeIn},{x:"0%",ease:Bounce.easeOut});
+    
+</script>
+</body>
+</html>
